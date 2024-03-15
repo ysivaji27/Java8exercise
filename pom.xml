@@ -14,8 +14,7 @@
     </properties>
     <dependencies>
 
-        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok
-             Testing 12222-->
+        <!-- lombok dependency -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
