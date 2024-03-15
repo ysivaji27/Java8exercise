@@ -34,7 +34,6 @@ public class MethodReferencesInJava {
         Map<Integer,String> map = new HashMap<>();
         map.put(1,"Giant");
         map.put(2,"Giant2");
-        map.put(2,"Giant3");
 
         Bicycle[] bikes =   bikeBrands.stream().map(Bicycle::new).toArray(Bicycle[]::new);
         System.out.println(bikes[0]);
