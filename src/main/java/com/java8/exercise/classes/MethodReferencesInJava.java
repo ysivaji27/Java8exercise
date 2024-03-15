@@ -6,7 +6,9 @@ import com.java8.exercise.model.Product;
 import com.sun.xml.internal.ws.util.StringUtils;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MethodReferencesInJava {
     public static void main(String[] args) {
@@ -21,7 +23,19 @@ public class MethodReferencesInJava {
                 new Bicycle(14, "orange"), new Bicycle(13, "lemon"),
                 new Bicycle(23, "bread"), new Bicycle(13, "sugar"));
 
-        bicycleList.stream()
-                .sorted((a, b) -> bikeFrameSizeComparator.compare(a, b)).forEach(System.out::println);
+        bicycleList.stream().sorted((a, b) -> bikeFrameSizeComparator.compare(a, b)).forEach(System.out::println);
+
+        bicycleList.stream().sorted(bikeFrameSizeComparator::compare).forEach(System.out::println);
+
+        System.out.println(bicycleList);
+
+
+        List<String> bikeBrands = Arrays.asList("Giant", "Scott", "Trek", "GT");
+        Map<Integer,String> map = new HashMap<>();
+        map.put(1,"Giant");
+        map.put(2,"Giant2");
+
+        Bicycle[] bikes =   bikeBrands.stream().map(Bicycle::new).toArray(Bicycle[]::new);
+        System.out.println(bikes[0]);
     }
 }
