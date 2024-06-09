@@ -2,8 +2,8 @@ package com.java8.exercise.classes;
 
 import com.java8.exercise.model.Bicycle;
 import com.java8.exercise.model.BicycleComparator;
-import com.java8.exercise.model.Product;
-import com.sun.xml.internal.ws.util.StringUtils;
+import com.sun.tools.javac.util.StringUtils;
+
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -13,8 +13,8 @@ import java.util.Map;
 public class MethodReferencesInJava {
     public static void main(String[] args) {
         List<String> messages = Arrays.asList("hello", "baeldung", "readers!");
-        messages.forEach(word-> StringUtils.capitalize(word));
-        messages.forEach(StringUtils::capitalize);
+        messages.forEach(word-> StringUtils.toUpperCase(word));
+        messages.forEach(StringUtils::toUpperCase);
         System.out.println(messages);
 
         BicycleComparator bikeFrameSizeComparator = new BicycleComparator();
