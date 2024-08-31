@@ -37,6 +37,10 @@ public class SortingTech {
         List<String> bikeBrands = Arrays.asList("Giant", "Scott", "Trek", "GT");
 
 
+        List<String> bikeBrandsList = Arrays.asList("Giant", "Scott", "Trek", "GT");
+
+
+
     }
 
 }
